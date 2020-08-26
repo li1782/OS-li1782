@@ -31,7 +31,9 @@ memset(SCREEN,' ',40*25);
 memset(COLS, WHITE, 40*25);
 char* sc = SCREEN+40;
 char* msg = MESSAGE;
-print_to_screen("li1782 operating system starting... testing hardware");
+print_to_screen("li1782 operating system starting...");
+print_newline();
+print_to_screen("testing hardware");
 print_newline();
 while(*msg) {
 *sc++ = *msg++;
