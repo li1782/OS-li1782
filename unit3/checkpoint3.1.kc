@@ -1,13 +1,13 @@
  import "string"
 #pragma link("mega65hyper.ld")
-const char* RASTER = 0xd012;
+const char* RASTER = 0xd0012;
 const char* VIC_MEMORY = 0xd018;
 const char* SCREEN =0x0400;
 const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
 const char BLACK = 0;
 const char WHITE = 1;
-char[] MESSAGE = "li1782 operating system starting...\n testing hardware";
+char[] MESSAGE = " ";
 
 unsigned char *current_screen_line = $0400;
 unsigned char current_screen_x = 0;
@@ -31,7 +31,8 @@ memset(SCREEN,' ',40*25);
 memset(COLS, WHITE, 40*25);
 char* sc = SCREEN+40;
 char* msg = MESSAGE;
-print_to_screen("li1782 testing hardward");
+print_to_screen("li1782 operating system starting... testing hardware");
+print_newline();
 while(*msg) {
 *sc++ = *msg++;
 }
